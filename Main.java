@@ -111,8 +111,22 @@ public class Main{
     }
 
     //Calcuates the sum of od and even indexed elements
-    public static void sumOfOddandEvenElements(){
-
+    public static void sumOfOddandEvenElements( int [] arr){
+        int sumOfOdd = 0;
+        int sumOfEven = 0;
+        int l = arr.length;
+        for ( int i = 0; i < l-1; i+=2){
+        sumOfEven += arr[i];
+        sumOfOdd += arr[i+1];
+        }
+        if (l % 2 == 0){
+            sumOfEven += arr[l-2];
+            sumOfOdd += arr[l-1];
+        }
+        else{
+            sumOfEven += arr[l-1];
+        }
+        System.out.print("Sum of odd indexes: " + sumOfOdd + "\nSum of even indexes: " + sumOfEven);
     }
 
     public static void main(String[] args) {
