@@ -64,11 +64,28 @@ public class Main{
 
     //Finds teh maximum value throughout the array
     public static void findMax(){
+        int max = 0;
 
+        for (int h = 0; h < list.length; h++) {
+            if (list[h] > max) {
+                max = list[h];
+            }
+        }
+
+    System.out.println(max);
     }
 
     //Finds the minimum value throughout the array
     public static void findMin(){
+        int min = 100;
+
+        for (int k = 0; k < list.length; k++) {
+            if (list[k] < min) {
+                min = list[k];
+            }
+        }
+        
+    System.out.println(min);
 
     }
 
