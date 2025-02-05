@@ -48,7 +48,7 @@ public class Main{
                     findMin();
                     break;
                 case 3:
-                    differenceFromAvarage();
+                    differenceFromAvarage(list);
                     break;
                 case 4:
                     sumOfOddandEvenElements();
@@ -72,9 +72,25 @@ public class Main{
 
     }
 
-    //Finds the avarage of teh array and displays how much each element differs from the avarage
-    public static void differenceFromAvarage(){
-
+    //Finds the avarage of the array and displays how much each element differs from the avarage
+    public static void differenceFromAvarage(int [] list){
+        int size;
+        double sumOfArray;
+        double avarage;
+        size = list.length;
+        sumOfArray = 0;
+        for (int i : list) 
+        {
+            sumOfArray += i;
+        }
+        avarage = sumOfArray/size;
+        System.out.printf("The average is %3.2f %n", avarage);
+        for (int i : list) 
+        {
+            double diff = i - avarage;
+            System.out.printf("%3.2f ", diff);
+        }
+        System.out.println();
     }
 
     //Calcuates the sum of od and even indexed elements
